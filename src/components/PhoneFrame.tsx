@@ -20,15 +20,15 @@ export const PhoneFrame: React.FC<PhoneFrameProps> = ({
   const isTerminal = variant === 'terminal';
 
   return (
-    <div className="flex w-[348px] shrink-0 flex-col items-center">
+    <div className="flex w-[320px] shrink-0 flex-col items-center">
       {/* Czytelna, nieucinająca tekstu etykieta nad telefonem */}
-      <div className="mb-3 flex w-full items-center justify-between gap-2 px-1">
+      <div className="mb-2.5 flex w-full items-center justify-between gap-2 px-1">
         <div>
-          <p className="text-[13px] font-extrabold text-[#111318]">{actorName}</p>
-          <p className="text-[11px] font-medium text-[#5A6270]">{actorRole}</p>
+          <p className="text-xs font-extrabold text-[#111318]">{actorName}</p>
+          <p className="text-[10.5px] font-medium text-[#5A6270]">{actorRole}</p>
         </div>
         <span
-          className={`shrink-0 rounded-lg px-2.5 py-1 text-[10px] font-bold ${
+          className={`shrink-0 rounded-lg px-2 py-0.5 text-[9.5px] font-bold ${
             isSenior
               ? 'bg-amber-100/90 text-amber-950 ring-1 ring-amber-300/60'
               : isTerminal
@@ -40,9 +40,9 @@ export const PhoneFrame: React.FC<PhoneFrameProps> = ({
         </span>
       </div>
 
-      {/* Obudowa smartfona o stałej szerokości 348px i wysokości 706px */}
+      {/* Obudowa smartfona przeskalowana do 92% (320px × 648px) */}
       <div
-        className={`relative flex h-[706px] w-[348px] shrink-0 flex-col overflow-hidden rounded-[44px] border-[8px] shadow-[0_24px_60px_rgb(17,19,24,0.12)] ${
+        className={`relative flex h-[648px] w-[320px] shrink-0 flex-col overflow-hidden rounded-[40px] border-[7px] shadow-[0_22px_54px_rgb(17,19,24,0.12)] ${
           isTerminal
             ? 'border-[#1E2430] bg-[#0F141D] text-white'
             : 'border-[#1A1D24] bg-[#F4F5F8] text-[#111318]'

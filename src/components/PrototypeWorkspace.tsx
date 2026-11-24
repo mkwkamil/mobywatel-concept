@@ -163,9 +163,9 @@ export const PrototypeWorkspace: React.FC<PrototypeWorkspaceProps> = ({ concept 
   return (
     <div className="flex min-h-screen flex-col xl:h-screen xl:flex-row xl:overflow-hidden">
       {/* ====================================================================
-          LEWY PANEL BOCZNY (325px): Powrót, Tytuł, Scenariusze + Od początku na dole
+          LEWY PANEL BOCZNY (300px przy skali 92%): Powrót, Tytuł, Scenariusze + Od początku na dole
           ==================================================================== */}
-      <aside className="flex w-full shrink-0 flex-col justify-between border-b border-[#E2E5EE] bg-white p-5 xl:h-full xl:w-[325px] xl:overflow-y-auto xl:border-r xl:border-b-0">
+      <aside className="flex w-full shrink-0 flex-col justify-between border-b border-[#E2E5EE] bg-white p-5 xl:h-full xl:w-[300px] xl:overflow-y-auto xl:border-r xl:border-b-0">
         <div className="space-y-5">
           <div className="flex items-center justify-between gap-2">
             <button
@@ -262,9 +262,9 @@ export const PrototypeWorkspace: React.FC<PrototypeWorkspaceProps> = ({ concept 
           2. Niżej: 2 wyśrodkowane telefony
           ==================================================================== */}
       <main className="flex flex-1 flex-col items-center overflow-y-auto px-5">
-        {/* Wysepka idąca od samej góry z zaokrąglonymi dolnymi rogami (szerokość 736px dopasowana do 2 telefonów) */}
+        {/* Wysepka idąca od samej góry z zaokrąglonymi dolnymi rogami (szerokość 676px dopasowana do 2 telefonów w skali 92%) */}
         {activeSteps.length > 0 && (
-          <div className="w-full max-w-[736px] shrink-0 rounded-b-[28px] border-x border-b border-[#E2E5EE] bg-white px-6 pt-4 pb-16 shadow-[0_10px_30px_rgb(17,19,24,0.04)]">
+          <div className="w-full max-w-[676px] shrink-0 rounded-b-[26px] border-x border-b border-[#E2E5EE] bg-white px-6 pt-3.5 pb-14 shadow-[0_10px_30px_rgb(17,19,24,0.04)]">
             <div className="flex w-full items-center justify-between gap-6">
               {/* Przycisk Wstecz */}
               <button
@@ -346,9 +346,9 @@ export const PrototypeWorkspace: React.FC<PrototypeWorkspaceProps> = ({ concept 
           </div>
         )}
 
-        {/* Obszar z 2 wyśrodkowanymi telefonami (zero ucinania krawędzi na ekranie 1440px) */}
-        <div className="flex flex-1 items-center justify-center pt-7 pb-9">
-          <div className="flex flex-col items-center justify-center gap-8 lg:flex-row lg:gap-10">
+        {/* Obszar z 2 wyśrodkowanymi telefonami (mieszczą się w całości w pionie i poziomie przy domyślnym 100%) */}
+        <div className="flex flex-1 items-center justify-center pt-5 pb-6">
+          <div className="flex flex-col items-center justify-center gap-8 lg:flex-row lg:gap-9">
             <PhoneFrame
               actorName={concept.dualScreenSetup.leftActor}
               actorRole={concept.dualScreenSetup.leftRole}
@@ -389,9 +389,9 @@ export const PrototypeWorkspace: React.FC<PrototypeWorkspaceProps> = ({ concept 
       </main>
 
       {/* ====================================================================
-          PRAWY PANEL BOCZNY (305px)
+          PRAWY PANEL BOCZNY (280px przy skali 92%)
           ==================================================================== */}
-      <aside className="flex w-full shrink-0 flex-col border-t border-[#E2E5EE] bg-[#F8F9FC] p-5 xl:h-full xl:w-[305px] xl:overflow-y-auto xl:border-t-0 xl:border-l">
+      <aside className="flex w-full shrink-0 flex-col border-t border-[#E2E5EE] bg-[#F8F9FC] p-5 xl:h-full xl:w-[280px] xl:overflow-y-auto xl:border-t-0 xl:border-l">
         <div className="mb-5">
           <p className="mb-2.5 text-xs font-bold tracking-wider text-[#8C93A4] uppercase">
             Kontekst koncepcji
